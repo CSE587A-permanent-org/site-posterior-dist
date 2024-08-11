@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "site_posterior"
+version = "3.0.0"
+description = "CSE587 Site Posterior Assignment"
+authors = ["chase mateusiak <chase.mateusiak@gmail.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+packages = [{include = "site_posterior"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+# Uncomment the line below and comment the one below that to use local copy of utils
+# Opposite to use the remote copy.
+# cse587autils = { path = "../cse587Autils", develop = true }
+cse587autils = { git = "https://github.com/CSE587A-permanent-org/cse587Autils.git" }
+numpy = "^1.25.1"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.25.0"
+autopep8 = "^2.0.2"
+flake8 = "^6.0.0"
+gradescope-utils = "^0.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
