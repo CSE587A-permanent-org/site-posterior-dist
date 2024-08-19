@@ -43,24 +43,17 @@ def site_posterior(sequence: list[int],
             raise ValueError("sequence must be a list of integers between 0 "
                              "and 3 (inclusive)")
 
-    # <snip>
+
+    # YOUR CODE GOES HERE.  Steps described below.
+    
     # Instantiate variables to hold the unnormalized posterior probabilities
-    site_posterior_unnormalized = sequence_model.site_prior
-    background_posterior_unnormalized = sequence_model.background_prior
-
+  
     # Compute the unnormalized posterior probabilities
-    for index, site_position in enumerate(sequence_model.site_base_probs):
-        site_posterior_unnormalized *= site_position[sequence[index]]
-        background_posterior_unnormalized *= \
-            sequence_model.background_base_probs[sequence[index]]
-    # </snip>
-
+   
     # Normalize the posterior probabilities and store the result in a variable
     # called posterior_prob
-    # <snip>
-    posterior_prob = (site_posterior_unnormalized /
-                      (site_posterior_unnormalized +
-                       background_posterior_unnormalized))
-    # </snip>
+   
+    # Delete the error
+    raise NotImplementedError("Implementing this is part of the assignment.")
 
     return posterior_prob
